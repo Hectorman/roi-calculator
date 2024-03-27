@@ -1,0 +1,220 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans Display", sans-serif;
+  background: #fff;
+  padding: 50px 30px;
+  color: #848484;
+  --primary-color: #F2BD2A;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 52px;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+.calc-wrapper {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  gap: 55px;
+}
+.calc-wrapper .row {
+  display: flex;
+  gap: 45px;
+  align-items: flex-end;
+}
+.calc-wrapper .row > div {
+  width: 50%;
+}
+.calc-wrapper .row:last-child .input-group {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .calc-wrapper .row {
+    flex-direction: column;
+  }
+  .calc-wrapper .row > div {
+    width: 100%;
+  }
+}
+.calc-wrapper > div {
+  width: 63%;
+}
+.calc-wrapper > div:last-child {
+  width: 37%;
+}
+.calc-wrapper .input-group {
+  margin-bottom: 65px;
+}
+.calc-wrapper .input-group label {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+.calc-wrapper .input-group p {
+  font-weight: 300;
+}
+.calc-wrapper .input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  background-image: url(images/icon-down.svg);
+  background-position: 96% 10px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+.calc-wrapper .input-group select:focus {
+  border-color: var(--primary-color);
+  outline: 1px solid var(--primary-color);
+}
+@media (max-width: 960px) {
+  .calc-wrapper {
+    flex-direction: column;
+  }
+  .calc-wrapper > div {
+    width: 100%;
+  }
+  .calc-wrapper > div:last-child {
+    width: 100%;
+  }
+}
+
+.slidecontainer {
+  --value: "50";
+  --pos: 50%;
+  position: relative;
+  padding-bottom: 40px;
+}
+.slidecontainer .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  transition: opacity 0.2s;
+  position: relative;
+  z-index: 10;
+  margin: 0;
+}
+.slidecontainer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+.slidecontainer .slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+.slidecontainer .output {
+  position: absolute;
+  left: var(--pos);
+  margin-left: -20px;
+  margin-top: 7px;
+  width: 40px;
+  text-align: center;
+}
+.slidecontainer .output::after {
+  content: var(--value);
+  display: inline-block;
+}
+.slidecontainer .progress {
+  position: absolute;
+  top: 14px;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+.slidecontainer .progress::after {
+  position: absolute;
+  content: "";
+  width: var(--pos);
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--primary-color);
+}
+
+.results-wrapper h2 {
+  color: #000;
+  font-size: 18px;
+  margin-top: 0;
+  font-weight: 600;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.results-wrapper > p {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+.results-wrapper .row {
+  align-items: stretch;
+  gap: 15px;
+}
+@media (max-width: 600px) {
+  .results-wrapper .row {
+    flex-direction: row;
+  }
+  .results-wrapper .row > div {
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .results-wrapper .row {
+    flex-direction: column;
+  }
+  .results-wrapper .row > div {
+    width: 100%;
+  }
+}
+.results-wrapper .box {
+  min-height: 96px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.results-wrapper .box label {
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--primary-color);
+}
+@media (max-width: 600px) {
+  .results-wrapper .box label {
+    font-size: 26px;
+  }
+}
+.results-wrapper .box p {
+  margin: 0;
+  font-size: 12px;
+}
+.results-wrapper .total {
+  margin-bottom: 15px;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

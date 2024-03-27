@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  
+    <h1>ROI Calculator</h1>
+
+    <div class="calc-wrapper">
+
+      <div>
+        <div class="row">
+          <div class="input-group">
+            <label>Your industry</label>
+            <p>Choose your industry, or pick Average if you can't find it.</p>
+            <select>
+              <option value="">Select an Industry</option>
+              <option value="technology">Technology</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="education">Education</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="retail">Retail</option>
+              <option value="hospitality">Hospitality</option>
+              <option value="media">Media</option>
+              <option value="construction">Construction</option>
+              <option value="transportation">Transportation</option>
+              <option value="average">Average</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Average Deal Size, $</label>
+            <p>Choose the average size of your deals.</p>
+            <div class="slidecontainer" style="--value:'3000';--pos:15%">
+              <input type="range" name="deals" min="0" step="100" max="20000" value="3000" class="slider">
+              <div class="output"></div>
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group">
+            <label>Number of B2B prospects</label>
+            <p>Choose the number of prospects you want to engage each month.</p>
+            <div class="slidecontainer" style="--value:'60';--pos:30%">
+              <input type="range" name="prospects" min="0" step="1" max="200" value="60" class="slider">
+              <div class="output"></div>
+              <div class="progress"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Close Ratio (after appointment) %</label>
+            <p>To calculate this number, divide the number of sales you made by the number of quotes you sent out.</p>
+            <div class="slidecontainer" style="--value:'20';--pos:20%">
+              <input type="range" name="ratio" min="0" step="1" max="100" value="20" class="slider">
+              <div class="output"></div>
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="results-wrapper">
+          <h2><strong>B2B</strong> lead generation that sees your business through</h2>
+
+          <div class="box total">
+            <label><span class="value">324,000</span> / Year</label>
+          </div>
+
+          <div class="row">
+            <div class="box subtotal convertion">
+              <label class="value">9</label>
+              <p>Approx. number of appointment booked / monthly</p>
+            </div>
+            <div class="box subtotal roi">
+              <label><span class="value">959</span>%</label>
+              <p>Return on marketing investment</p>
+            </div>
+          </div>
+
+          <p>Each model offers flexible pricing to fit your lead generation needs and stay within the limits of your budget.</p>
+        </div>
+      </div>
+
+    </div>
+
+	<script src="index.js"></script>
+  </body>
+</html>
